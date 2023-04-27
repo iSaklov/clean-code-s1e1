@@ -6,31 +6,31 @@ const completedTasksHolder = document.querySelector("#completed-tasks");
 const createNewTaskElement = function(taskString) {
 
 	const listItem = document.createElement("li");
-	listItem.classList.add('list-task__item');
+	listItem.classList.add("list-task__item");
 
 	const checkBox = document.createElement("input");
-	checkBox.type = 'checkbox';
-	checkBox.classList.add('checkbox');
+	checkBox.type = "checkbox";
+	checkBox.classList.add("checkbox");
 
 	const label = document.createElement("label");
-	label.classList.add('label');
+	label.classList.add("label");
 	label.innerText = taskString;
 
 	const editInput = document.createElement("input");
 	editInput.type = "text";
-	editInput.classList.add('input');
+	editInput.classList.add("input");
 
 	const editButton = document.createElement("button");
 	editButton.innerText = "Edit";
-	editButton.classList.add('button', 'button_edit-task');
+	editButton.classList.add("button", "button_edit-task");
 
 	const deleteButton = document.createElement("button");
-	deleteButton.classList.add('button', 'button_delete-task');
+	deleteButton.classList.add("button", "button_delete-task");
 
 	const deleteButtonImg = document.createElement("img");
-	deleteButtonImg.src = './remove.svg';
-	deleteButtonImg.classList.add('button__img');
-	deleteButtonImg.alt = 'remove'
+	deleteButtonImg.src = "./remove.svg";
+	deleteButtonImg.classList.add("button__img");
+	deleteButtonImg.alt = "remove"
 	deleteButton.appendChild(deleteButtonImg)
 
 	listItem.appendChild(checkBox);
@@ -57,7 +57,7 @@ const addTask = function() {
 const editTask = function() {
 	const listItem = this.parentNode;
 	console.log("this", this);
-	const editInput = listItem.querySelector('.input');
+	const editInput = listItem.querySelector(".input");
 	const label = listItem.querySelector(".label");
 	const editBtn = listItem.querySelector(".button_edit-task");
 	const containsClass = listItem.classList.contains("list-task__item_edit");
@@ -81,14 +81,14 @@ const deleteTask = function() {
 
 const taskCompleted = function() {
 	const listItem = this.parentNode;
-	listItem.classList.add('list-task__item_completed');
+	listItem.classList.add("list-task__item_completed");
 	completedTasksHolder.appendChild(listItem);
 	bindTaskEvents(listItem, taskIncomplete);
 }
 
 const taskIncomplete = function() {
 	const listItem = this.parentNode;
-	listItem.classList.remove('list-task__item_completed');
+	listItem.classList.remove("list-task__item_completed");
 	incompleteTaskHolder.appendChild(listItem);
 	bindTaskEvents(listItem,taskCompleted);
 }
