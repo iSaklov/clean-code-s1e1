@@ -1,16 +1,16 @@
 /* Basic Style */
 ul {
-	margin:0;
+	margin: 0;
 	padding: 0px;
 }
 
 li {
-  list-style:none;
+  list-style: none;
 }
 
 input,
 button {
-	outline:none;
+	outline: none;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
 	font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
 
 	.header {
 		text-align: center;
@@ -153,21 +153,21 @@ body {
 
 
 /* Completed */
-.list-task__item_complite > .label {
+.list-task__item_completed > .label {
 	text-decoration: line-through;
 	color: #888;
 }
 
 /* Edit Task */
 .list-task__item .input {
-	display:none;
+	display: none;
 }
 
 .list-task__item_edit .input {
-	display:inline-block;
-	width:224px;
+	display: inline-block;
+	width: 224px;
 }
 
 .list-task__item_edit .label {
-	display:none;
+	display: none;
 }
